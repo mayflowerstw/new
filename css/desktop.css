@@ -1,0 +1,649 @@
+		
+@media screen and (min-width:960px){
+
+
+		.full-width{		/*全頻寬度*/
+			width:100%;
+
+		}
+		.col-2{
+			width: calc(100% /2 - 30px);	/*calc計算*/
+			float: left;
+			margin: 0 15px;
+		}
+		.col-3{
+			width: calc(100% /3 - 30px);
+			float: left;
+			margin: 0 15px;
+		}
+		.col-4{
+			width: calc(100% /4 - 30px);
+			float: left;
+			margin: 0 15px;
+		}
+		.wraper{
+			width: 100%;
+			height: 100%;
+		}
+		.wraper1,.wraper2,.wraper3{
+			width: 100%;
+			height: 100%;
+			background-repeat:no-repeat;
+			-webkit-background-size: cover;
+			background-attachment: fixed;	/*背景附件固定*/
+			background-size: cover;
+			background-position: center;
+		}
+		.wraper1{
+			/*background-image:url(images/nature-sunset-river-dusk.jpg);*/
+			animation: fade 10s infinite; /*infinite無窮循環*/
+		}
+		@keyframes fade {
+			0% {background-image:url(../images/nature-sunset-river-dusk.jpg);}
+			33.33%{background-image: url(../images/teddy-kelley-70401.jpg);}
+			66.66%{background-image: url(../images/jeremy-thomas-99324.jpg);}
+			100%{background-image: url(../images/nature-sunset-river-dusk.jpg);}
+		}
+		nav{
+			background-color:transparent;	
+			position: fixed;
+			z-index: 10;
+		}
+		.nav-black{
+			background-color: #111;
+		}
+		nav .logo{
+			float: left;
+			height: 40px;
+			line-height: 40px;
+			color:#fff;
+			font-size: 22px;
+			border: 3px solid #FFF;
+			font-weight: 600;
+			margin: 12px 0;
+			padding: 0 5px;
+		}
+		nav .orange{
+			color: #EB8E13;
+		}
+		nav ul{
+			float: right;
+		}
+		nav li{
+			list-style-type:none;
+			float: left;
+		}
+		nav a{
+			display: block;
+			height: 70px;
+			line-height: 70px;
+			color: #fff;
+			text-align: center;
+			padding-left: 15px;
+			transition:transform .3s,color .1s .1s ease-in-out; 
+		}
+		nav a:hover{
+			color:#29D5CF;
+			transform:scale(1.5,2);
+		}
+		header{
+			padding-top:250px;
+		}
+		header .title{
+			text-align:center;
+		}
+		header .title h1{
+			font-size:36px;
+			color: #fff;
+		}
+		header .title hr{
+			width: 270px;
+			height: 1px;
+			background-color: #fff;
+		}
+		header .title  h3{
+			color:#fff;
+			font-style:italic;
+			font-size: 24px;
+		}
+		header .title a,header .right a,.welcome a,.store .col-3 a,.touch input[type="submit"]{
+			display: block;
+			width: 86px;
+			height: 25px;
+			text-align: center;
+			line-height: 25px;
+			background-color:rgba(255,255,255,.5);
+			padding: 10px 20px;
+			margin: auto;
+			margin-top: 50px;
+			border-radius: 5px;		/*變圓角*/
+			transition: all 0.3s;
+			color: #fff;
+			font-size:16px;
+		}
+		header .title a:hover{
+			background-color: red;
+		}
+		header .menu {
+			color: #fff;
+			text-align: center;
+			margin-top: 80px;
+			margin-bottom: 80px;
+		}
+		header .icon{
+			border-radius:50%;
+			border:1px solid #fff;
+			padding: 10px;
+			margin-bottom: 15px;
+			font-size:2em;
+		}
+		header .menu .col-3{
+			transition: all .3s;
+			padding: 15px;
+			box-sizing: border-box;
+		}
+		header .menu .col-3:hover{
+			background-color:rgba(0,0,0,0.5);
+		}
+		.orangeblock{
+			/*height: 200px;*/ 	/*如果用行高跟高度字會往下掉所以用padding解*/
+			padding: 80px 0;
+			background-color: #EB8E13;
+			/*margin-top: 50px;*/
+		}
+		.orangeblock .left{
+			float: left;
+			font-size: 24px;
+			color: #fff;
+			/*line-height: 200px;*/		/*如果用行高跟高度字會往下掉所以用padding解*/
+		}
+		.orangeblock .right{
+			float: right;
+
+		}
+		.orangeblock .right a{
+			font-size:14px;
+			margin:0;
+			margin-top: -10px;
+			/*margin-top: 77.5px;*/
+		}
+		.what {
+			text-align: center; 
+			margin-bottom: 50px;
+		}
+		.what h2{
+			color:#fff;
+			margin: 30px 0 15px 0;
+			font-size: 36px;
+		}
+		.what h4{
+			color:#fff;
+			margin: 15px 0 60px 0;
+		}
+		.what .col-3{
+			background-color: #fff;
+			padding: 10px;
+			box-sizing: border-box;
+			margin-top: 15px;
+			margin-bottom: 15px;
+		}
+		.what .col-3 .icon{
+			border-radius:50%;
+			border:2px solid #fff;	
+		}
+		.what .col-3 h5{
+			margin: 5px 0;
+			color: #ccc;
+			font-size: 18px;
+		}
+		.what .icon_what{
+			width: 50px;
+			height: 50px;
+			border-radius: 50%;
+			background-color: #36C8C2;
+			line-height: 50px;	/*要對齊置中所以行高要跟高度一樣*/
+			color: #EB8E13;
+			font-size:20px;
+			margin: 15px 0;
+			transition:all 0.3s;
+			font-size: 2em;
+		}
+		.what .col-3:hover .icon_what{
+			background-color: #EB8E13;
+			color: #fff;
+		}
+		.about{
+			background-color: #fff;
+			padding: 100px 0;
+		}
+		.about .col-2 h2{
+			font-size:36px;
+			 
+		}
+		.about .col-2:nth-of-type(2){
+			padding: 15px;
+			box-sizing: border-box;		
+			/*元素的內距和邊框將不會增加元素本身的寬度*/
+		}
+		.welcome{
+			padding: 50px;
+			text-align: center;
+			background-color: rgba(46,208,170,0.5);	
+			/*rgba(46,208,170,0.5) 0.5指透明度1是沒有透明度0是看不見*/
+			color: #fff;
+		}
+		.welcome p{
+			font-size: 24px;
+			font-weight: 600px;
+			padding: 20px;
+		}
+		.welcome a,.store .col-3 a,.touch input[type="submit"]{
+			color:#fff;
+			font-size: 12px;
+			background-color: #EB8E13;	
+			padding:5px 10px;
+		}
+		.welcome a:hover{
+			background-color: #C737A4;
+			color: #fff;
+		}
+		.fixed-width_600{		
+			width: 600px;		/*把裡面的英文擠在一起*/
+			margin:auto;
+		}
+		.team,.happy{
+			padding: 100px 0;
+			background-color: #fff;
+		}
+		.team h1,.store h1,.happy h1,.news h1,.touch h1{
+			text-align:center;
+			font-size:30px;
+			margin-bottom: 20px;
+		}
+		.team h4,.store h4,.happy h4,.news h4,.touch h4{
+			text-align:center;
+			font-weight: 20px;
+			margin-bottom: 60px;
+		}
+		.team .col-4{
+			height: 400px;
+			background-size: cover;
+			background-repeat: no-repeat;
+			color:#808080;
+			position: relative;
+			overflow:hidden;	/*溢出的隱藏*/
+		}
+		.team .col-4::before{
+			content: "";
+			display: block;
+			width: 95%;
+			height: 100%;
+			background-color: rgba(255,255,255,0.3);
+			z-index: 1;	/*浮上來*/
+			transform: skewX(-30deg)translateX(-200px);	
+			/*變型:傾斜x-30度 移動x-200度*/
+			transition: all 0.3s;	/*轉變 全部三秒*/
+		}
+		.team .col-4:hover::before{
+			content: "";
+			transform: skewX(-30deg)translateX(-30px);
+		}
+		.team .col-4:hover .name,
+		.team .col-4:hover .dese,
+		.team .col-4:hover .icon
+		{
+			opacity: 1;			/*透明度*/
+		}
+		.team .col-4:nth-of-type(1){
+			background-image: url(../images/01.jpg);	
+		} 
+		.team .col-4:nth-of-type(2){
+			background-image: url(../images/02.jpg);	
+		} 
+		.team .col-4:nth-of-type(3){
+			background-image: url(../images/03.jpg);	
+		} 
+		.team .col-4:nth-of-type(4){
+			background-image: url(../images/04.jpg);	
+		} 
+		.team .col-4 .job{
+			position: absolute;
+			bottom: 0;
+			padding: 5px;
+			text-align: right;
+			color: #fff;
+			width: 100%;
+			box-sizing: border-box;
+		}
+		.team .col-4:nth-of-type(1) .job{
+			background-color: #FFD800;
+		}
+		.team .col-4:nth-of-type(2) .job{
+			background-color: #7FFFC5;
+		}
+		.team .col-4:nth-of-type(3) .job{
+			background-color: #FFE97F;
+		}
+		.team .col-4:nth-of-type(4) .job{
+			background-color: #307ACE;
+		}
+		.team .name,.team .dese,.team .icon{
+			position: absolute;
+			left: 50px;
+			width: 100px;
+			top: 17%;
+			opacity: 0;
+			/*display: none;*/
+			transition:all 0.3s 0.2s;
+		}
+		.team .name{
+			font-size: 20px;
+			color: #333;
+		}
+		.team .dese{
+			top: 35%;
+			font-size: 14px;
+			color: #808080;
+		}
+		.team .icon{
+			top: 60%;
+
+		}
+		.team .icon span{
+			display: inline-block;
+			width: 25px;
+			height: 25px;
+			border-radius: 50%;
+			background-color: #BB4353;
+			line-height: 25px;
+			text-align: center;
+			color:#fff;
+			cursor:pointer;				/*游標:手指*/
+		}
+		.team .col-4:nth-of-type(1) .icon span{
+			background-color: #F38181;
+		}
+		.team .col-4:nth-of-type(2) .icon span{
+			background-color:#FFE97F;
+		}
+		.team .col-4:nth-of-type(3) .icon span{
+			background-color:#2FCF96;
+		}
+		.team .col-4:nth-of-type(4) .icon span{
+			background-color:#7F92FF;
+		}
+		.store{
+			padding: 100px 0;
+		}
+		.store h1,.store h4,.new h1,.news h4,.touch h1,.touch h4{
+			color:#fff;
+		}
+		.store .col-3{
+			height: 400px;
+			position: relative;
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center;
+		}
+		.store .col-3:nth-of-type(1){
+			background-image: url(../images/colthes.jpg);
+		}
+		.store .col-3:nth-of-type(2){
+			background-image: url(../images/colthes2.jpg);
+		}
+		.store .col-3:nth-of-type(3){
+			background-image: url(../images/colthes3.jpg);
+		}
+		.store .col-3::before{
+			content: "";
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			background-color:rgba(0,0,0,0.75);
+			opacity: 0;			/*透明度0*/
+			transition:all 0.3s 0.3s;	
+			/*動畫 哪一個要動作加在上面全部0.3秒 遲鈍0.3秒*/
+		}
+		.store .col-3:hover::before{
+			opacity: 1;
+		}
+		.store .col-3:hover a,.store .col-3:hover .price{
+			opacity: 1;
+		}
+		.store .col-3 a{
+			position: absolute;
+			top:0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			margin:auto;
+			opacity: 0;
+			transition: all 0.3s;	/*動畫 */
+		}
+		.store .col-3 .price{
+			position: absolute;
+			color: #fff;
+			top:67%;
+			text-align: center;
+			width: 100%;
+			font-weight: 600;
+			opacity: 0;
+			transition: all 0.3s;
+		}
+		.store .col-3 .title{
+			position: absolute;
+			color: #fff;
+			background-color: rgba(0,0,0,0.8);
+			text-align: center;
+			bottom: 0;
+			padding: 10px;
+			width: 100%;
+			box-sizing:border-box;	/*底圖強制符合這圖的寬度*/
+		}
+		.happy .col-3{
+			padding: 15px;
+			background-color: #eee;
+			box-shadow: 1px 0 5px rgba(0,0,0,0.5);
+			box-sizing: border-box;
+			margin-top: 30px;
+			position: relative;
+		}
+		.happy .col-3 img{
+			display:block;
+			width: 81px;
+			height: 81px;
+			border-radius: 50%;
+			border:2px solid #fff;
+			box-shadow: 0 0 0 1px #F79E07;
+			position:relative;
+			margin: auto;
+			top:-65px;
+		}
+		.happy .col-3 p{
+			position: relative;
+			top:-40px;
+			font-style: italic;
+		}
+		.happy .col-3 .quote{
+			position: absolute;
+			top:15px;
+			left: 15px;
+		}
+		.happy .quote span{
+			font-size:36px;
+			color: #FF6A00;
+		}
+		.happy .sign{
+			position: absolute;
+			right: 15px;
+			bottom: 15px;
+			font-size:24px;
+			font-style: italic;
+			color: #f40;
+			font-weight: 600;
+		}
+		.news{
+			padding: 100px 0;	
+		}
+		.news .col-4{
+			margin:0;
+			width: 25%;
+			height: 200px;
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center;
+			position: relative;
+			color: #fff;
+			text-align: center;
+			overflow: hidden;	/*溢出來的隱藏*/
+		}
+		.news .col-4:nth-of-type(1){
+			background-image: url(../images/b1.jpg);
+		}
+		.news .col-4:nth-of-type(2){
+			background-image: url(../images/b2.jpg);
+		}
+		.news .col-4:nth-of-type(3){
+			background-image: url(../images/b3.jpg);
+		}
+		.news .col-4:nth-of-type(4){
+			background-image: url(../images/b4.jpg);
+		}
+		.news .box{
+			position: absolute;
+			top:181px;
+			transition: all 0.3s;
+		}
+		.new h3{
+			margin-bottom: 10px;
+		}
+		.news  h3,.news  p{
+			text-shadow: 1px 1px 5px #000;
+		}
+		.news .col-4:hover .box{
+			top:30%;
+		}
+		.touch{
+			padding: 100px 0;
+			background-color: rgba(0,0,0,.6);	
+		}
+		.touch .col-2:nth-of-type(1){
+			background-color: #fff;
+			border-radius: 5px;
+			padding: 15px;
+			box-sizing: border-box;
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: border-box;
+		}
+		.touch h3{
+			text-align: center;
+			padding: 15px 0;
+		}
+		.touch input[type="text"],		/*特定針對input各個值*/
+		.touch input[type="email"],
+		.touch input[type="number"],
+		.touch textarea{
+			width:100%;
+			height: 30px;
+			margin: 5px 0;
+			padding: 5px;
+			box-sizing: border-box;
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			border:0;			/*先讓邊寬都拿掉*/
+			border-bottom: 2px solid #ccc; /*在針對下面給css*/
+			transition: all 0.3s;
+		} 
+		.touch input[type="text"]:focus,	/*:focus 當點下去的動作*/	
+		.touch input[type="email"]:focus,
+		.touch input[type="number"]:focus,
+		.touch textarea:focus{
+			outline:0;			/*點下去時沒有藍色邊框*/
+			border-bottom: 2px solid #F06219;
+		}
+		.touch textarea{
+			height: 100px;
+		}
+		.touch input[type="submit"]{
+			margin: 10px auto;
+			height: initial;		/*高度initial初始化*/
+			line-height: initial;
+		}
+		.touch .col-3{
+			color: #a5a5a5;
+			text-align: center;
+		}
+		.touch .icon_touch{
+			font-size: 45px;
+			margin-bottom: 20px;
+		}
+		.touch p{
+			font-size:14px;
+			margin-bottom: 15px;
+		}
+		.touch .map{
+			width:100%; 
+			height:235px;
+		}
+		.touch .map iframe{
+			width: 100%;
+			height: 100%;
+		}
+		footer{
+			background-color: #fff;
+			padding: 80px 0;
+		}
+		footer h5{
+			text-transform: uppercase;
+			font-size:20px;
+			border-bottom: 2px solid #c15d1f;
+			padding-bottom: 10px;
+			margin-bottom: 15px;
+		}
+		footer li{
+			list-style-type: none;
+			padding: 5px 0;
+		}
+		footer .col-4:nth-of-type(3) li{
+			display: inline-block;
+			background-color: #c15d1f;
+			border-radius: 3px;
+			color: #fff;
+			padding: 5px;
+			font-size: 13px;
+			margin: 3px 0;
+		}
+		footer .bottom{
+			margin-top:50px;
+			text-align: center;
+		}
+		footer .copyright{
+			margin-bottom: 10px;
+		}
+		footer .icon_footer span{
+			padding:0 5px;
+		}
+		.gotop {
+			display: block;
+			width: 40px;
+			height: 40px;
+			background-color: #222;
+			color: #fff;
+			text-align: center;
+			line-height: 40px;
+			position: fixed;
+			right: 15px;
+			bottom: 15px;
+			text-decoration: none;
+			border-radius: 50%;
+			cursor: pointer;
+		}
+		.gotop::before {
+			content: "";
+			border-left:9px solid transparent;
+			border-right:9px solid transparent;
+			border-top:9px solid transparent;
+			border-bottom:15px solid #fff;
+			display: inline-block;
+		}
+		}

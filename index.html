@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>youtuber</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Joti+One" rel="stylesheet">
+	<link rel="stylesheet" href="css/slick.css">
+	<link rel="stylesheet" href="css/slick-theme.css">
+	<link rel="stylesheet" href="fancybox/jquery.fancybox.css">	
+	<link rel="stylesheet" href="css/hamburger.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css">
+	<script src="js/jquery-1.12.4.min.js"></script>
+	<script src="fancybox/jquery.fancybox.min.js"></script>	
+	<script src="js/slick.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js"></script>
+	
+<style>
+	@import url(https://fonts.googleapis.com/earlyaccess/notosanstc.css);
+	* {
+		font-family: "Joti One","Noto Sans TC"
+	}
+	body,h1,h2,h3,h4,h5,h6,ul,li,p{
+		margin: 0;
+		padding: 0;
+	}
+	a {
+		text-decoration: none;
+		color: #000;
+	}
+	.full-width{
+		width: 100%;
+	}
+	
+	.fixed-width {
+		width: 960px;
+		margin: auto;
+	}
+	.col-3{
+		width: calc(100% /3 - 30px);
+		float: left;
+		margin: 0 15px;
+		}
+
+	.col-4{
+		width: calc(100% /4 - 30px);
+		float: left;
+		margin: 0 15px;
+		}
+	.clearfix::after {
+		content: "";
+		display: block;
+		clear: both;
+	}
+	img{
+		width: 100%;
+	}
+	body{
+		overflow-x:hidden; 
+	}
+	.wraper1{
+		/*width: 100%;*/
+		height: 100%;
+		background-repeat:no-repeat;
+		-webkit-background-size: cover;
+		background-attachment: fixed;	/*背景附件固定*/
+		background-size: cover;
+		background-position: center;
+		animation: fade 20s infinite;
+		}
+	@keyframes fade {
+		0% {background-image:url(images/bg1.jpg);}
+		33.33%{background-image: url(images/bg2.jpg);}
+		66.66%{background-image: url(images/bg3.jpg);}
+		100%{background-image: url(images/bg4.jpg);}
+		}
+	nav{
+		background-color:#E7DB3E;
+		position: fixed;
+		z-index: 10;
+		-webkit-background-size: cover;
+		background-size: cover;
+	}
+	nav .logo{
+		float: left;
+		height: 40px;
+		line-height: 40px;
+		color: #fff;
+		font-size: 22px;
+		border:3px solid #fff;
+		font-weight: 600;
+		margin: 12px 30px;
+		padding: 0 5px;
+	}
+	nav ul{
+		float: right;
+		margin: 0 30px;
+	}
+	nav li{
+		list-style-type:none;
+		float:left;
+	}
+	nav a{
+		display: block;
+		height: 70px;
+		line-height: 70px;
+		color:#fff;
+		text-align: center;
+		padding-left: 15px;
+		transition: transform .3s,color .1s .1s ease-in-out;
+
+	}
+	nav a:hover{
+		color: #3359C4;
+		transform: scale(1.5,2);
+		text-decoration: none;
+	}
+	header{
+		padding-top: 250px;
+	}
+	header .title{
+		text-align: center;
+		padding-bottom: 300px;
+	}
+	header .title h1{
+		font-size: 36px;
+		color:rgba(89, 199, 219,1);
+		text-shadow: 2px 2px #fff;
+	}
+	header .title h3{
+		color:#E7F63D;
+		text-shadow: 1px 1px #000;
+		padding-bottom: 10px;
+
+	}
+	header .title h4{
+		color:#fff;
+		text-shadow: 1px 1px #000;
+		line-height: 50px;
+
+	}
+	header .title hr{
+		width: 400px;
+		height: 1px;
+		background-color: #fff;
+		}
+	header .icon{
+		border-radius:50%;
+		border:1px solid #fff;
+		padding: 10px;
+		text-align: center;
+		margin-bottom: 50px;
+	}
+	.type {
+		padding-top: 80px;
+	}
+	.type h2{
+		color:#fff;
+		margin:30px 0 15px 0;
+		font-size: 36px;
+		text-shadow: 2px 2px #000;
+		text-align: center;
+	}
+	.type .col-3{
+		width: 290px;
+		height: 400px;
+		display:block;
+		background-color: #fff;
+		padding:10px;
+		box-sizing: border-box;
+		margin-top: 15px;
+		margin-bottom: 15px;
+		text-align: center;
+	}
+	.type .col-3 .icon{
+		position: center;
+		border-radius: 50%;
+		border:2px solid #fff;
+	}
+	.type .col-3 h4{
+		margin:3px 0;
+		color: #DAE931;
+		font-size: 20px;
+		text-shadow: 1px 1px #796666;
+	}
+	.type .col-3 h5{
+		font-size: 15px;
+		color: #4648F0;
+	}
+	.type  .icon_type{
+		width: 50px;
+		height: 50px;
+		border-radius: 50%;
+		background-color: #36C8C2;
+		line-height: 50px;	
+		color: #EB8E13;
+		font-size:20px;
+		margin: 10px 20px 10px 20px;
+		transition:all 0.3s;
+		font-size: 2em;
+		position: center;
+		}
+	.type .col-3:hover .icon_type{
+		background-color: #EB8E13;
+		color: #fff;
+		}
+	.welcome{
+		padding: 50px;
+		text-align: center;
+		background-color: rgba(46,208,170,0.5);	
+		color: #fff;
+		text-shadow: 2px 2px #000;
+		}
+	.welcome p{
+		font-size: 24px;
+		font-weight: 600px;
+		padding: 20px;
+		}
+	.youtube{
+			padding: 100px 0;
+		}
+	.youtube .col-4{
+			margin:0;
+			width: 25%;
+			height: 300px;
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center;
+			position: relative;
+			text-align: center;
+			overflow: hidden;	/*溢出來的隱藏*/	
+		}
+	.youtube .col-4:nth-of-type(1){
+			background-image: url(images/錕.jpg);
+		}
+	.youtube .col-4:nth-of-type(2){
+			background-image: url(images/眾量級.jpg);
+		}
+	.youtube .col-4:nth-of-type(3){
+			background-image: url(images/料理.jpg);
+		}
+	.youtube .col-4:nth-of-type(4){
+			background-image: url(images/這群人.jpg);
+		}
+	.youtube .col-4:nth-of-type(5){
+			background-image: url(images/皇阿瑪.jpg);
+		}
+	.youtube .col-4:nth-of-type(6){
+			background-image: url(images/蔡阿嘎.jpg);
+		}
+	.youtube .box{
+			position: absolute;
+			transition: all 0.3s;
+			height: 50px;
+		}
+	.youtube1{
+			padding: 90px 10px 40px 10px;
+		}
+	.youtube1 img {
+			padding-left: 50px;
+			width: 210px;
+			height: 200px;
+		}
+	.youtube1 h3{
+		color: #fff;
+		text-align: center;
+		text-shadow: 2px 2px #000;
+		padding-bottom: 10px;
+	}
+	.team{
+			padding: 77px 0;
+			background-color: transparent;
+		}
+	.team h1{
+			text-align:center;
+			font-size:30px;
+			margin-bottom: 20px;
+			color: #fff;
+			text-shadow: 2px 2px #000;
+		}
+	.team .col-3{
+			height: 400px;
+			background-size: cover;
+			background-repeat: no-repeat;
+			color:#EF1515;
+			position: relative;
+			overflow:hidden;	/*溢出的隱藏*/
+			background-position: center;
+			width: 100%;
+		}
+	.team .col-3::before{
+			content: "";
+			display: block;
+			width: 100%;
+			height: 100%;
+			background-color: rgba(254,190,255,0.3);
+			z-index: 1;	
+			transform: skewX(-30deg)translateX(-200px);	
+			transition: all 0.3s;	
+		}
+	.team .col-3:hover::before{
+			content: "";
+			transform: skewX(-30deg)translateX(-30px);
+		}
+	.team .col-3:hover .name,
+	.team .col-3:hover .dese,
+	.team .col-3:hover .icon
+		{
+			opacity: 2;			
+		}
+	.team .col-3:nth-of-type(1){
+			background-image: url(images/lucy.gif);
+		} 
+	.team .col-3:nth-of-type(2){
+			background-image: url(images/tina.jpg);	
+		} 
+	.team .col-3:nth-of-type(3){
+			background-image: url(images/me.jpg);	
+		} 
+
+	.team .col-3 .job{
+			position: absolute;
+			bottom: 0;
+			padding: 5px;
+			text-align: right;
+			color: #fff;
+			width: 100%;
+			box-sizing: border-box;
+			right: 0px;
+			text-shadow: 1px 1px #000;
+		}
+	.team .col-3:nth-of-type(1) .job{
+			background-color: #3B4BF1;
+		}
+	.team .col-3:nth-of-type(2) .job{
+			background-color: #7FFFC5;
+		}
+	.team .col-3:nth-of-type(3) .job{
+			background-color: #FFE97F;
+		}
+	
+	.team .name,.team .dese,.team .icon{
+			position: absolute;
+			left: 50px;
+			width: 100px;
+			top: 17%;
+			opacity: 0;
+			/*display: none;*/
+			transition:all 0.3s 0.2s;
+		}
+	.team .name{
+			font-size: 50px;
+			color: #6A5F5F;
+			text-shadow: 2px 2px #fff;
+		}
+	.team .dese{
+			top: 35%;
+			font-size: 30px;
+			color: #E2E644;
+			text-shadow: 2px 2px #000;
+		}
+	.team .icon{
+			top: 60%;
+
+		}
+	.team .icon span{
+			display: inline-block;
+			width: 25px;
+			height: 25px;
+			border-radius: 50%;
+			background-color: #BB4353;
+			line-height: 25px;
+			text-align: center;
+			color:#fff;
+			cursor:pointer;
+						
+		}
+	.team .col-3:nth-of-type(1) .icon span{
+			background-color: #F38181;
+		}
+	.team .col-3:nth-of-type(2) .icon span{
+			background-color:#574DEF;
+		}
+	.team .col-3:nth-of-type(3) .icon span{
+			background-color:#2FCF96;
+		}
+	
+
+	.buttom{
+			padding: 25px 0;
+			background-color:rgba(241, 242, 174,0.5);
+			text-align: center;
+			line-height: 20px;
+		}
+	.buttom h3{
+			padding-bottom: 10px;
+		}
+	.gotop {
+			/*display: block;*/
+			width: 40px;
+			height: 40px;
+			background-color: #E7DB3E;
+			color: #fff;
+			text-align: center;
+			line-height: 40px;
+			position: fixed;
+			right: 15px;
+			bottom: 15px;
+			/*text-decoration: none;*/
+			border-radius: 50%;
+			cursor: pointer;
+		}
+	.gotop::before {
+			content: "";
+			border-left:9px solid transparent;
+			border-right:9px solid transparent;
+			border-top:9px solid transparent;
+			border-bottom:15px solid #fff;
+			display: inline-block;
+		}
+
+		footer{
+			background-color:rgba(241, 242, 174,0.5) ;
+			color: #fff;
+			text-shadow: 1px 1px #000;
+		}
+		
+		footer .bottom{
+			/*margin-top:50px;*/
+			text-align: center;
+		}
+		footer .copyright{
+			margin-bottom: 10px;
+		}
+		footer .icon_footer span{
+			padding:0 5px;
+		}	
+</style>
+
+  
+	<script>
+			$(document).ready(function(){
+				$("nav").find("a").click(function(){
+					let target = $(this).data("target");
+					let _offset = $("."+target).offset().top;
+					$("html,body").animate({
+						scrollTop:_offset
+					});
+				})
+				$(".gotop,.home").click(function(){
+				$("html,body").animate({
+					scrollTop: 0
+				})
+				return false;
+			});
+			$(".gotop").hide();
+			$(window).scroll(function(){
+				let h = $(window).scrollTop();
+				if(h>600){
+					$(".gotop").fadeIn();
+					// $("nav").addClass("nav-black");
+				}else{
+					$(".gotop").fadeOut();
+					// $("nav").removeClass("nav-black");
+				}
+
+				});
+			$(".hamburger").click(function(){
+					$(this).toggleClass("hamburger-x");
+					$(this).next().slideToggle();
+			});
+				$(window).resize(function(){
+					let w = $(window).width();
+					if(w>750){
+						$(".hamburger").next().show();
+					}else{
+						$(".hamburger").next().hide();
+						$(".hamburger").removeClass("hamburger-x");
+					}
+				
+				})
+					$('.youtube-col').slick({
+						autoplay: true,
+						  dots: true,
+						  infinite: true,
+						  speed: 300,
+						  slidesToShow: 4,
+						  slidesToScroll: 1,
+						  responsive: [
+						    {
+						      breakpoint: 960,
+						      settings: {
+						        slidesToShow: 3,
+						        slidesToScroll: 3,
+						        infinite: true,
+						        dots: true
+						      }
+						    },
+						    {
+						      breakpoint: 650,
+						      settings: {
+						        slidesToShow: 2,
+						        slidesToScroll: 1
+						      }
+						    },
+						    {
+						      breakpoint: 480,
+						      settings: {
+						        slidesToShow: 1,
+						        slidesToScroll: 1
+						      }
+						    }
+						    
+						  ]
+						});
+
+			})
+			
+	</script>
+
+</head>
+<body>
+	<div class="wraper1">
+		<nav class="full-width clearfix">
+			
+				<div class="logo">happy</div>
+				<div class="hamburger hamburger-x"><span></span></div>
+			<ul>
+				<li><a href="javascript:;" class="home" data-target="home">About Us</a></li>
+				<li><a href="javascript:;" data-target="type">Collection</a></li>
+				<li><a href="javascript:;" data-target="welcome">Recommand</a></li>
+				<li><a href="javascript:;" data-target="youtube1">Hot Youtuber</a></li>
+				<li><a href="javascript:;" data-target="team">Our Team</a></li>
+				<li><a href="javascript:;" data-target="bottom">Suggest</a></li>
+				
+			</ul>
+			
+		</nav>
+		<div class="gotop"></div>
+		<header class="full-width">
+			<div class="title">
+				<h1><i>Welcome to happy time</i></h1>
+				<hr>
+				<h3><i>不出門能知天下事，永遠在時代尖端，滿足知識缺乏恐懼症</i></h3>
+				<h4>
+					現在紅什麼<br>
+					在新興時代<br>
+					若是沒有跟上目前最in der潮流<br>
+					就準備當個老叩叩吧!<br>
+					我們提供目前youtube最紅的youtuber<br>
+					為您服務<br>
+					讓您在這繁忙的世界裡<br>
+					能紓壓解悶 歡樂無窮 資訊最潮
+				</h4>
+			</div>
+			<div class="type clearfix">
+				<div class="fixed-width ">
+					<h2>Collection</h2>
+					<div class="col-3">
+						<div class="icon_type fa fa-television"></div>
+						<h4>實事</h4>
+						<h5>李錫錕-錕P</h5>
+						<p>李錫錕是臺灣政治學學者，現任台大政治學系兼任教授。任教台大近40年，開設政治學與政治概論通識課程。其粉絲頁開台短短八個月，最高影片觀看次數破900萬。著有《首都症候群》、《Power錕的大人學》、《Power錕是這樣煉成的》等書。</p>	
+					</div>
+					<div class="col-3">
+						<div class="icon_type fa fa-child"></div>
+						<h4>娛樂</h4>
+						<h5>眾量級</h5>
+						<p>由一對情侶的整人、搞笑、無俚頭充滿歡樂的製造機，散發更多正面能量。情侶檔網紅家寧以及Andy老師組成「眾量級CROWD」，兩人經常在臉書上分享情侶間互整，以及各種男女相處的爆笑趣事，吸引超過百萬粉絲關注。</p>
+					</div>
+					<div class="col-3">	
+						<div class="icon_type fa fa-ravelry"></div>
+						<h4>料理</h4>
+						<h5>錵鑶居家料理小教室</h5>
+						<p>是不是常常看電視上師傅在教做菜，你也很有興趣想要來親身試試！但是是不是做法太複雜，食材取得不易就由“錵鑶居家料理小教室”，讓您輕鬆學習做菜，由我們聖凱師，有10年以上料理經驗，就是要教你如何做出簡單又不輸五星級飯店的料理！讓你簡單當大廚!!!
+						</p>	
+					</div>
+					<div class="col-3">
+						<div class="icon_type fa fa-graduation-cap"></div>
+						<h4>新鮮</h4>
+						<h5>TGOP 這群人</h5>
+						<p>在這個網路突飛猛進的時代，「這群人」藉由網路抓住了成名機會的15分鐘，自製短片放上網，無論是誇張的奧客，還是職業倦怠的店員，渾身是戲的他們，都能將生活上一件再普通不過的小事，拍成影片，或許也因為都是真實經歷，都能擊中觀眾笑點。</p>	
+					</div>
+					<div class="col-3">
+						<div class="icon_type fa fa-paw"></div>
+						<h4>寵物</h4>
+						<h5>黃阿瑪的後宮生活</h5>
+						<p>人氣貓黃阿瑪因為一個壓垮紙箱的影片爆紅，粉絲專頁「黃阿瑪的後宮生活」也已經累積約34萬名粉絲，近日奴才「狸貓」和「志銘」更幫阿瑪和後宮6名成員出了一本書，《黃阿瑪的後宮生活－阿瑪建國史》以阿瑪為主角，詳細記錄奴才和阿瑪認識的經過，及建立後宮的過程。</p>	
+					</div>
+					<div class="col-3">
+						<div class="icon_type fa fa-eercast"></div>
+						<h4>時事</h4>
+						<h5>蔡阿嘎</h5>
+						<p>蔡阿嘎為臺灣知名部落客。2008年在網路出道，以愛臺灣為主題拍攝多支臺灣時事議題以及搞笑影片聞名。至今為跨足電影、音樂等領域之全方位發展名人。影片製作風格多元，包括：聚焦臺灣社會時事、遊記、臺語教學、公益、KUSO等等議題，深受時下年輕人喜愛。現為臺灣網路界，最知名之影音部落客。</p>	
+					</div>
+					
+				</div>
+			</div>
+			<div class="welcome">
+				<p>Recommand</p>
+				<audio controls="controls" autoplay="autoplay" loop="loop">
+					  <source src="images/Imagine Dragons - Thunder.mp3" type="audio/mpeg">
+				</audio>
+			</div>
+			<div class="youtube clearfix">
+				<div class="youtube-col">
+					<div class="col-4 col-4-1">
+						<a href="https://www.youtube.com/watch?v=g4bGSYiJ628&t=2s">
+							<div class="box">
+								<img src="http://img.youtube.com/vi/g4bGSYiJ628/hqdefault.jpg" alt="李錫錕-錕P">
+							</div>
+						</a>
+					</div>
+
+					<div class="col-4 col-4-2">
+						<a href="https://www.youtube.com/watch?v=_8ijFMHERno">
+							<div class="box">
+								<img src="http://img.youtube.com/vi/_8ijFMHERno/hqdefault.jpg" alt="眾量級">
+							</div>
+						</a>
+					</div>
+
+					
+					<div class="col-4 col-4-3">
+						<a href="https://www.youtube.com/watch?v=Pi-loGJD2Cc">
+							<div class="box">
+								<img src="http://img.youtube.com/vi/Pi-loGJD2Cc/hqdefault.jpg" alt="錵鑶居家料理小教室">
+							</div>
+						</a>
+					</div>
+					
+					<div class="col-4 col-4-4">
+						<a href="https://www.youtube.com/watch?v=pPYgTFt7zLg">
+							<div class="box">
+								<img src="http://img.youtube.com/vi/pPYgTFt7zLg/hqdefault.jpg" alt="TGOP 這群人">
+							</div>
+						</a>
+					</div>
+
+					<div class="col-4 col-4-5">
+						<div class="box">
+							<a href="https://www.youtube.com/watch?v=ctoI8y7WfnY">
+								<img src="http://img.youtube.com/vi/ctoI8y7WfnY/hqdefault.jpg" alt="黃阿瑪的後宮生活">
+							</a>
+						</div>
+						
+					</div>
+					<div class="col-4 col-4-6">
+						<a href="https://www.youtube.com/watch?v=JWFyESYzrnQ">
+						<div class="box">
+							<img src="http://img.youtube.com/vi/JWFyESYzrnQ/hqdefault.jpg" alt="蔡阿嘎">
+						</div>
+						</a>
+					</div>
+				</div>
+			</div>
+		</header>
+		<div class="youtube1">
+			<h3>Hot Youtuber</h3>
+
+		        <a href="images/youtube-1.jpg" data-fancybox="fa" data-caption="李錫錕-錕P">
+		        	<img src="images/youtube-1.jpg" alt="">
+		        </a>
+		        <a href="images/youtube-2.jpg" data-fancybox="fa" data-caption="眾量級">
+		        	<img src="images/youtube-2.jpg" alt="">
+		        </a>
+		        <a href="images/youtube-3.jpg" data-fancybox="fa" data-caption="錵鑶居家料理小教室">
+		        	<img src="images/youtube-3.jpg" alt="">
+		        </a>
+		        <a href="images/youtube-4.jpg" data-fancybox="fa" data-caption="TGOP 這群人">
+		        	<img src="images/youtube-4.jpg" alt="">
+		        </a>
+		        <a href="images/youtube-5.jpg" data-fancybox="fa" data-caption="黃阿瑪的後宮生活">
+		        	<img src="images/youtube-5.jpg" alt="">
+		        </a>
+		        <a href="images/youtube-6.jpg" data-fancybox="fa" data-caption="蔡阿嘎">
+		        	<img src="images/youtube-6.jpg" alt="">
+		        </a>
+			</div>
+			<div class="team clearfix">
+				<h1>Our Team</h1>
+				<div class="fixed-width">
+					<div class="col-3">
+						<div class="name">Lucy</div>
+						<div class="dese">Warm</div>
+						<div class="icon">
+							<span class="fa fa-tripadvisor"></span>
+							<span class="fa fa-heartbeat"></span>
+							<span class="fa fa-stethoscope"></span>
+						</div>
+						<div class="job">Lucy</div>
+					</div>
+					<div class="col-3">
+						<div class="name">Tina</div>
+						<div class="dese">Clever</div>
+						<div class="icon">
+							<span class="fa fa-gratipay"></span>
+							<span class="fa fa-rebel"></span>
+							<span class="fa fa-envira"></span>
+						</div>
+						<div class="job">Tina</div>
+					</div>
+					<div class="col-3">
+						<div class="name">May</div>
+						<div class="dese">lively</div>
+						<div class="icon">
+							<span class="fa fa-github-alt"></span>
+							<span class="fa fa-star-half-o"></span>
+							<span class="fa-snowflake-o"></span>
+
+						</div>
+						<div class="job">May</div>
+					</div>
+				</div>
+			</div>
+			<div class="buttom">
+				<h3>若有想要的內容，可以在這裡反應我們願意為您服務喔!</h3>
+					<form>
+						姓名:<input type="text" required placeholder="請輸入姓名!!"><br><br>
+						Email:<input type="email"placeholder="請輸入email!!"><br><br>
+						電話:<input type="phone"placeholder="請輸入電話!!"><br><br>
+						性別:
+							男<input type="radio" value="男" name="sex" checked>
+							女<input type="radio" value="女" name="sex"><br><br>
+						學歷:
+							<select>
+								<option>請選擇</option>
+								<option value="國中">國中</option>
+								<option value="高中">高中</option>
+								<option value="大學">大學</option>
+								<option value="研究所以上">研究所以上</option><br><br>
+							</select><br><br>
+						喜歡類型:
+							休閒<input type="checkbox" value="休閒" name="aaa" checked>
+							搞笑<input type="checkbox" value="搞笑" name="aaa">
+							學習<input type="checkbox" value="學習" name="aaa">
+							實事<input type="checkbox" value="實事" name="aaa">
+							寵物<input type="checkbox" value="寵物" name="aaa">
+							運動<input type="checkbox" value="運動" name="aaa">
+							遊戲<input type="checkbox" value="遊戲" name="aaa">
+							資訊<input type="checkbox" value="資訊" name="aaa">
+							幼教<input type="checkbox" value="幼教" name="aaa">
+							<br><br>
+						
+						建議:<textarea cols="30" rows="3" maxlength="20" required placeholder="歡迎提供您寶貴的建議，讓我們提供更好的服務給您!!" overflow:hidden></textarea><br>
+						<input type="submit" value="送出">
+						<input type="reset" value="清空">
+					</form>
+			</div>
+		
+
+			<footer>
+					<div class="fixed-width">
+						<div class="top clearfix">
+							
+						</div>
+						<div class="bottom">
+							<div class="copyright">歡樂無窮有限股份公司 </div>
+							<div class="icon_footer">
+								<span class="fa fa-facebook"></span>
+								<span class="fa fa-twitter"></span>
+								<span class="fa fa-google-plus"></span>
+								<span class="fa fa-behance"></span>
+								<span class="fa fa-pinterest-p"></span>
+							</div>
+						</div>
+					</div>
+				</footer>
+
+
+	</div><!---wraper-->
+		
+</body>
+</html>

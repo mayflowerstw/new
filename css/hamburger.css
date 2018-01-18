@@ -1,0 +1,76 @@
+.hamburger,.hamburger-x{
+	width: 50px;
+	height: 50px;
+	position: relative;
+	/*background-color:#f44;*/
+}
+.hamburger span,.hamburger-x span{
+	display: block;
+	width: 30px;
+	height: 5px;
+	background-color: #fff;
+	position: absolute;
+	top:0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	margin:auto;
+	transition: all 0.3s;
+}
+.hamburger span::before,.hamburger span::after,
+.hamburger-x span::before,.hamburger-x span::after{
+	content: "";
+	display: block;
+	width: 30px;
+	height: 5px;
+	position: absolute;
+	background-color: #fff;
+	
+}
+.hamburger span::before{
+	top:-10px;
+	transition: transform 0.3s ,top 0.3s 0.3s;
+
+}
+.hamburger span::after{
+	/*top:10px;*/
+	bottom: -10px;
+	/*transition: top 0.3s,transform 0.3s 0.3s;*/
+	transition: transform 0.3s ,bottom 0.3s 0.3s;
+}
+.hamburger-x span{
+	background-color: transparent;
+}
+.hamburger-x span::before{
+	content: "";
+	transform: rotate(405deg);
+	top:0;
+	transition: top 0.3s ,transform 0.3s 0.3s;
+}
+.hamburger-x span::after{
+	content: "";
+	transform: rotate(-405deg);
+	/*top:0;*/
+	bottom:0;
+	transition: bottom 0.3s ,transform 0.3s 0.3s;
+}
+@media screen and (min-width:750px){
+	.hamburger{
+		display: none;
+	}
+}
+@media screen and (max-width:749px){
+	.hamburger{
+		display: block;
+		float: right;
+	}
+	nav ul{
+		float: none;
+		clear: both;
+		display: none;
+	}
+	nav li{
+		float: none;
+	}
+}
+
